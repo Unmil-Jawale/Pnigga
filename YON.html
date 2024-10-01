@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Im trying..</title>
+    <link rel="stylesheet" href="YON.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Will we Date?</h1>
+            <p>I’d love to get back what I lost</p>
+        </header>
+
+        <!-- Image Section -->
+        <div class="image-section">
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWk1aDZja2s3OWk5NjJmOXNzNjBqb3F4M2sxbDU4cTZ0MGN6cmlnNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/62cZr4Et8Mu8Mlrweh/giphy.gif" alt="Funny GIF">  
+        </div>
+        <div class="actions">
+            <a href="Yes.html" style="text-decoration: none;">Yes!</a>
+            <button id="no">No, Sorry</button>
+        </div>
+    <style>
+            #no{ 
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative; 
+            right: 5px; 
+            top: 0px;
+            font-size: 1.5em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #no {
+        background-color: #d2d2d2;
+        color: black;
+        }
+
+        #no:hover {
+            background-color: #9a9a9a;
+        }
+    </style>
+
+    </head>
+    <body>
+    
+        <script>
+            let clickCount = 0;
+        
+            document.getElementById("no").addEventListener("click", function() {
+                clickCount++;
+                
+                this.style.left = Math.random() * (window.innerWidth - 1050) + 'px';
+                this.style.top = Math.random() * (window.innerHeight - 1000) + 'px'; 
+                
+                this.disabled = false;
+        
+               
+                if (clickCount === 10) {
+                    document.getElementById("message").innerText = "If you've clicked 'No' enough times, Try clicking Yes Maybe😊";
+                }
+            });
+        </script>
+
+        <footer>
+            <p class="note" id="message"></p>
+        </footer>
+    </div>
+
+</body>
+</html>
